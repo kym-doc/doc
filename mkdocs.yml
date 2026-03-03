@@ -24,11 +24,27 @@ theme:
   language: zh
   features:
     - navigation.tabs
-
-
-# note & math
+    - navigation.tabs.sticky
+    - navigation.prune
+    - navigation.top
+    - search.suggest
+    - search.highlight
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode 
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 
 markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      line_spans: __span
+  - pymdownx.superfences
   - admonition
   - pymdownx.details
   - pymdownx.superfences
