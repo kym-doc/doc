@@ -1,1 +1,23 @@
-site_name: My Docs
+site_name: 匡院笔记分享
+nav:
+  - 主页: index.md
+  - 计算机科学与技术:
+    - 编译原理: 
+      - 课程介绍: cs/compiler/about.md
+      - cs/compiler/chapter1.md
+      - cs/compiler/chapter3.md
+      - cs/compiler/chapter4.md
+      - cs/compiler/chapter9.md
+    - 计算机网络: 
+      - 课程介绍: cs/computer_network/about.md
+
+theme: 
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
