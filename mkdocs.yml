@@ -11,6 +11,7 @@ nav:
       - cs/compiler/chapter9.md
     - 计算机网络: 
       - 课程介绍: cs/computer_network/about.md
+      - cs/computer_network/chapter1.md
 
 theme: 
   name: material
@@ -18,7 +19,20 @@ theme:
   features:
     - navigation.tabs
 
+
+# note & math
+
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
