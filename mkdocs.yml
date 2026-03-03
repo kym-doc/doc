@@ -12,6 +12,12 @@ nav:
     - 计算机网络: 
       - 课程介绍: cs/computer_network/about.md
       - cs/computer_network/chapter1.md
+      - cs/computer_network/chapter2/c2.md
+      - cs/computer_network/chapter3/c3.md
+      - cs/computer_network/chapter4/c4.md
+      - cs/computer_network/chapter5/c5.md
+      - cs/computer_network/chapter6/c6.md
+      - cs/computer_network/chapter7/c7.md
 
 theme: 
   name: material
