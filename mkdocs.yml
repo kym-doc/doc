@@ -1,5 +1,9 @@
 site_name: 匡院笔记分享
 site_url: https://water-mi.github.io/kym-doc/
+repo_name: KYM-DOC
+repo_url: https://github.com/water-mi/kym-doc
+edit_uri: edit/main/docs/
+
 nav:
   - 主页: index.md
   - 计算机科学与技术:
@@ -29,6 +33,7 @@ theme:
     - navigation.top
     - search.suggest
     - search.highlight
+    - content.action.view
   palette:
     - scheme: default
       toggle:
@@ -58,3 +63,8 @@ extra_javascript:
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
+
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - git-authors
