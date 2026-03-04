@@ -65,6 +65,7 @@ extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
 
 plugins:
+  - search
   - git-revision-date-localized:
       enable_creation_date: true
   - git-authors
