@@ -1,6 +1,6 @@
 # 1. 导引
 
-![image.png](images/c1-pic1.png)
+![image.png](https://box.nju.edu.cn/seafhttp/f/93f54560b20941eaa04b/?op=view)
 
 - 符号表：在编译器运行过程中逐步构建
 - 词法分析：读入源程序的字符流，输出为词法单元 (Token)，怎么方便怎么来，一般包含
