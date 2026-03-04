@@ -19,7 +19,7 @@ ad hoc：
 2. 结点只能向自己链路范围内的结点传输
 3. 这些结点互相之间构成了网络
 
-![image.png](image.png)
+![ch7-p1](pics/chapter7/ch7-p1.png)
 
 ## 7.2 无线链路和网络特征
 
@@ -36,7 +36,7 @@ ad hoc：
 
 1. 存在隐藏终端问题
 
-![image.png](image%201.png)
+![ch7-p2](pics/chapter7/ch7-p2.png)
 
 A 和 C 之间的信号衰减严重导致检测不到彼此（有障碍物，比如山），但是他们的信号在 B 处又会发生很强的干扰
 
@@ -58,11 +58,11 @@ decoding：内积后求和（编码数据与编码做内积）
 
 对于没有干扰的情况：
 
-![image.png](image%202.png)
+![ch7-p3](pics/chapter7/ch7-p3.png)
 
 对于有干扰的情况：
 
-![image.png](image%203.png)
+![ch7-p4](pics/chapter7/ch7-p4.png)
 
 ## 7.3 WiFi：802.11 无线局域网
 
@@ -70,7 +70,7 @@ decoding：内积后求和（编码数据与编码做内积）
 
 基本构件模块是基本服务集（basic service set, BSS，也称作 cell），包含一个或多个无线站点以及一个被称为接入点（Access point, AP）的中央基站，ap 连接到一个互联设备（交换机或者路由器）进而接入互联网
 
-![image.png](image%204.png)
+![ch7-p5](pics/chapter7/ch7-p5.png)
 
 基础设施模式下的 BSS:
 
@@ -95,7 +95,7 @@ ad-hoc 下的 BSS：
 - 可能存在身份验证
 - 运行 DHCP 以获取在 AP 子网中的 ip 地址
 
-![image.png](image%205.png)
+![ch7-p6](pics/chapter7/ch7-p6.png)
 
 ### 7.3.2 802.11 mac 协议
 
@@ -108,19 +108,19 @@ CSMA：当侦听到信道忙碌抑制传输（随机 backoff）
 
 故一旦站点开始发送一个帧，就完全地发送整个数据帧
 
-![image.png](image%206.png)
+![ch7-p7](pics/chapter7/ch7-p7.png)
 
 DIFS:分布式帧间间隔 SIFS:短帧间间隔
 
 > RTS（请求发送, request to send）, CTS（允许发送，clear to send）
 
-![image.png](image%207.png)
+![ch7-p8](pics/chapter7/ch7-p8.png)
 
 ### 7.3.3 802.11 帧
 
 长度（34～2346 字节）
 
-![image.png](image%208.png)
+![ch7-p9](pics/chapter7/ch7-p9.png)
 
 1. 有效载荷和 crc
 
@@ -128,9 +128,9 @@ DIFS:分布式帧间间隔 SIFS:短帧间间隔
 
 2. 地址字段，每个地址字段都是一个 mac 地址
 
-    ![image.png](image%209.png)
+    ![ch7-p10](pics/chapter7/ch7-p10.png)
 
-    ![image.png](image%2010.png)
+    ![ch7-p11](pics/chapter7/ch7-p11.png)
 
     AP 是链路层设备，不能理解 ip 地址，地址3帮助获取了路由器接口的 mac 地址.
 
