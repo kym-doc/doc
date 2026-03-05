@@ -28,7 +28,7 @@ peer-to-peer architecture
 
 进程从套接字接收信息/传递信息给套接字
 
-![ch2-p1](pics/chapter2/ch2-p1.png)
+![ch2-p1](https://s41.ax1x.com/2026/03/05/peCewyd.png)
 
 ---
 
@@ -68,13 +68,13 @@ RTT (**round** trip time)：time for a small packet to travel from client to ser
 
 Non-persistent HTTP’s response time:
 
-![ch2-p2](pics/chapter2/ch2-p2.png)
+![ch2-p2](https://s41.ax1x.com/2026/03/05/peCe6Ff.png)
 
 > Non-persistent HTTP response time for N files = 2N RTT + N file transmission time（每次都要重发请求）
 >
 > But for Persistent HTTP resonse time = 2 RTT + N file transmission time（带流水线）
 
-![ch2-p3](pics/chapter2/ch2-p3.png)
+![ch2-p3](https://s41.ax1x.com/2026/03/05/peCecY8.png)
 
 ---
 
@@ -106,7 +106,7 @@ HOL(head of line) blocking: http2 通过按帧分割传输减轻了这个问题
 
 ### E-mail, SMTP, IMAP
 
-![ch2-p4](pics/chapter2/ch2-p4.png)
+![ch2-p4](https://s41.ax1x.com/2026/03/05/peCeDeI.png)
 
 Three major components:
 
@@ -137,7 +137,7 @@ PPT 第 52 张有一个 smtp(simple mail transfer protocol)+tcp 传输邮件的�
 
 smtp:push; imap/pop: pull
 
-![ch2-p5](pics/chapter2/ch2-p5.png)
+![ch2-p5](https://s41.ax1x.com/2026/03/05/peCesTP.png)
 
 ---
 
@@ -152,11 +152,11 @@ root dns servers - top-level domain(tld) dns servers - authoritative dns servers
 
 - iterated query（迭代查询）
 
-![ch2-p6](pics/chapter2/ch2-p6.png)
+![ch2-p6](https://s41.ax1x.com/2026/03/05/peCerwt.png)
 
 - recursive query（递归查询）
 
-![ch2-p7](pics/chapter2/ch2-p7.png)
+![ch2-p7](https://s41.ax1x.com/2026/03/05/peCe0OA.png)
 
 DNS records:
 

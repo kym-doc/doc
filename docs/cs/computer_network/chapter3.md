@@ -29,7 +29,7 @@
 
 这种情况下只需关心 source port 和 dest port，都使用目标地的同一个套接字来处理相同的 port。
 
-![ch3-p1](pics/chapter3/ch3-p1.png)
+![ch3-p1](https://s41.ax1x.com/2026/03/05/peCegfS.png)
 
 ### **Connection-oriented demultiplexing**
 
