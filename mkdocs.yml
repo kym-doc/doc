@@ -1,14 +1,73 @@
 site_name: 匡院笔记分享
 site_url: https://water-mi.github.io/kym-doc/
+
 repo_name: KYM-DOC
 repo_url: https://github.com/water-mi/kym-doc
 edit_uri: edit/main/docs/
 
+theme: 
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.prune
+    - navigation.path
+    - navigation.indexes 
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.action.view
+    - content.code.copy
+  font:
+    text: LXGW WenKai Screen GB Screen
+    code: JetBrains Mono
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode 
+    - scheme: slate
+      primary: blue grey
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
+  - css/customize.css
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - git-authors
+
 nav:
   - 主页: 
-    - 主页: index.md
-    - pdf 测试: pdf.md
+    - index.md
+    - pdf 与代码块样例: test.md
   - 计算机科学与技术:
+    - cs/index.md
     - 编译原理: 
       - 课程介绍: cs/compiler/about.md
       - cs/compiler/chapter1.md
@@ -24,52 +83,3 @@ nav:
       - cs/computer_network/chapter5.md
       - cs/computer_network/chapter6.md
       - cs/computer_network/chapter7.md
-
-theme: 
-  name: material
-  language: zh
-  features:
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.prune
-    - navigation.path
-    - navigation.indexes 
-    - navigation.top
-    - search.suggest
-    - search.highlight
-    - content.action.view
-  palette:
-    - scheme: default
-      toggle:
-        icon: material/brightness-7 
-        name: Switch to dark mode 
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-
-markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-      linenums: true
-      line_spans: __span
-  - pymdownx.superfences
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.arithmatex:
-      generic: true
-
-extra_javascript:
-  - javascripts/katex.js
-  - https://unpkg.com/katex@0/dist/katex.min.js
-  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
-
-extra_css:
-  - https://unpkg.com/katex@0/dist/katex.min.css
-
-plugins:
-  - search
-  - git-revision-date-localized:
-      enable_creation_date: true
-  - git-authors
