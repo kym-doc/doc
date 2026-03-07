@@ -7,7 +7,16 @@
 此外，pdf 文件应尽可能该存储在外部网盘中，并通过外链的方式进行引用，以避免仓库过大导致的问题。我们通过 `pdf.js` 将文件转化成了图片进行展示
 
 ??? note "点我查看显示效果"
-    <div class="pdf-horizontal-container" data-pdf="../test.pdf"></div>
+    <div id="pdf-viewer" style="height: 100vh"></div>
+    <script type="module">
+    import EmbedPDF from 'https://testingcf.jsdelivr.net/npm/@embedpdf/snippet@2/dist/embedpdf.js';
+    EmbedPDF.init({
+        type: 'container',
+        target: document.getElementById('pdf-viewer'),
+        src: '../test.pdf',
+        theme: { preference: 'system' }
+    });
+    </script>
 
 ## 代码块测试
 

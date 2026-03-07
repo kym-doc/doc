@@ -21,8 +21,6 @@ theme:
     - search.highlight
     - content.action.view
     - content.code.copy
-    - navigation.instant
-    - navigation.instant.progress
 
   font:
     text: LXGW WenKai Screen GB Screen
@@ -57,8 +55,6 @@ extra_javascript:
   - _assets/javascripts/pdf-viewer.js
   - https://unpkg.com/katex@0/dist/katex.min.js
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
-  - https://unpkg.com/pdfjs-dist@5.5.207/build/pdf.min.mjs
-  - https://unpkg.com/pdfjs-dist@5.5.207/build/pdf.worker.min.mjs
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
