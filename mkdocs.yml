@@ -17,6 +17,7 @@ theme:
     - navigation.path
     - navigation.indexes 
     - navigation.top
+    - navigation.footer
     - search.suggest
     - search.highlight
     - content.action.view
