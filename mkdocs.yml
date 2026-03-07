@@ -74,6 +74,10 @@ nav:
     - all/index.md
     - 近代应用数学:
       - 课程介绍: all/modern_applied_math/about.md
+      - all/modern_applied_math/exercise1.md
+      - all/modern_applied_math/exercise2.md
+      - all/modern_applied_math/midterm.md
+      - all/modern_applied_math/final.md
   - 计算机科学与技术:
     - cs/index.md
     - 编译原理: 
