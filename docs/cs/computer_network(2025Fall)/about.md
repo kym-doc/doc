@@ -23,5 +23,3 @@
     张渊老师应该每年都会有一节复习课，以下记载了2025Fall的期末大概内容（很零碎，不过也没什么用就是了）。复习ppt（全英）和期中试卷附在njubox链接（https://box.nju.edu.cn/d/4ce1aa5c0a8f419b8d8c/）中。
 
 ip 数据报格式和意思，子网划分，dhcp，nat 作用 实现，公私网 ip，middle boxes，两个路由算法 link state distance vector（slides 的例子），复杂度分析，ospf bgp，不考 sdn，icmp ping traceroute 原理，常见错误检测算法，crc，mac 各种访问，aloha，各种 aloha 性能，csma/cd，cd ca 区别，docsis，mac 地址划分，arp 协议，以太网 csam/cd，switch routers，无线网络基本组成，link 特点，cdma，802.11 运行过程，csma/ca，hidden terminal 以及避免，蓝牙信道划分
-
-

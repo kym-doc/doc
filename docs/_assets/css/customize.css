@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "LXGW WenKai Screen GB Screen";
+    src: url("../fonts/LXGWWenKaiMonoGBScreen.ttf");
+}
+
+.pdf-horizontal-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    /* 每页间隔 */
+    scroll-snap-type: x mandatory;
+    /* 滑动吸附到页 */
+    padding: 10px 0;
+}
+
+.pdf-page {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    /* 每页吸附 */
+    width: 600px;
+    /* 页面宽度，可按需调整 */
+    height: auto;
+}

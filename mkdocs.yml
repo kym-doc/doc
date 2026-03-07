@@ -8,6 +8,8 @@ edit_uri: edit/main/docs/
 theme: 
   name: material
   language: zh
+  icon:
+    repo: fontawesome/brands/github
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -19,6 +21,9 @@ theme:
     - search.highlight
     - content.action.view
     - content.code.copy
+    - navigation.instant
+    - navigation.instant.progress
+
   font:
     text: LXGW WenKai Screen GB Screen
     code: JetBrains Mono
@@ -43,18 +48,21 @@ markdown_extensions:
   - pymdownx.superfences
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.tilde
 
 extra_javascript:
-  - javascripts/katex.js
+  - _assets/javascripts/katex.js
+  - _assets/javascripts/pdf-viewer.js
   - https://unpkg.com/katex@0/dist/katex.min.js
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  - https://unpkg.com/pdfjs-dist@5.5.207/build/pdf.min.mjs
+  - https://unpkg.com/pdfjs-dist@5.5.207/build/pdf.worker.min.mjs
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
-  - css/customize.css
+  - _assets/css/customize.css
 
 plugins:
   - search
@@ -66,6 +74,10 @@ nav:
   - 主页: 
     - index.md
     - pdf 与代码块样例: test.md
+  - 多专业合上/通修:
+    - all/index.md
+    - 近代应用数学:
+      - 课程介绍: all/modern_applied_math/about.md
   - 计算机科学与技术:
     - cs/index.md
     - 编译原理: 
@@ -87,3 +99,8 @@ nav:
       - cs/computer_network(2025Fall)/about.md
     - 密码学原理:
       - cs/crypto/about.md
+  - 人工智能（脑科学与人工智能）:
+    - ai/index.md
+    - 计算方法:
+      - 课程介绍: ai/numerical_method/about.md
+      - ai/numerical_method/notes.md
