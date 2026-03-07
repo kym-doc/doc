@@ -2,3 +2,16 @@
     font-family: "LXGW WenKai Screen GB Screen";
     src: url("../fonts/LXGWWenKaiMonoGBScreen.ttf");
 }
+
+.pdf-viewer-container {
+    font-family: "LXGW WenKai Screen GB Screen", sans-serif;
+}
+
+.pdf-viewer-notice {
+    font-family: "LXGW WenKai Screen GB Screen", sans-serif;
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: calc(100vh - 56px);
+}
