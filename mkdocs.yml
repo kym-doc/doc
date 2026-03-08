@@ -79,6 +79,10 @@ nav:
       - all/modern_applied_math/exercise2.md
       - all/modern_applied_math/midterm.md
       - all/modern_applied_math/final.md
+      - all/modern_applied_math/keyreview.md
+    - 概率论与数理统计:
+      - 课程介绍: all/probability/about.md
+      - all/probability/quickreview.md
   - 计算机科学与技术:
     - cs/index.md
     - 编译原理: 
