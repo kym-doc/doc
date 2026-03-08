@@ -1,4 +1,4 @@
-# Probability Theory
+# Probability Theory (quick review)
 
 ## Discrete Random Variable
 
@@ -7,14 +7,14 @@
 - 随机变量$X\in\{0,1\}$，概率质量函数（pmf）为
   $$
   p_X(k)=\bold{Pr}(X=k)=\begin{cases}
-  p&\text{if }k=1\\
+  p&\text{if }k=1\\\\
   1-p&\text{if }k=0
   \end{cases}
   $$
 
 - 期望和方差
   $$
-  \text{E}[X]=0\cdot(1-p)+1\cdot p=p\\
+  \text{E}[X]=0\cdot(1-p)+1\cdot p=p\\\\
   \text{Var}[X]=\text{E}[X^2]-\text{E}[X]^2=p-p^2=p(1-p)
   $$
 
@@ -33,7 +33,7 @@
   $$
   其中$X_i$表示第$i$次伯努利试验的结果，那么
   $$
-  \text{E}[X]=\text{E}[X_1]+\cdots+\text{E}[X_n]=np\\
+  \text{E}[X]=\text{E}[X_1]+\cdots+\text{E}[X_n]=np\\\\
   \text{Var}[X]=\underset{i=1}{\overset{n}\sum}\text{Var}[X_i]=np(1-p)
   $$
 
@@ -52,16 +52,16 @@
   $$
   其中$I_k\in\{0,1\}$表示是否前$k-1$次试验都失败了，如果是都失败了则取$1$，那么
   $$
-  \text{E}[X]=\underset{k=1}{\overset{\infty}\sum}\text{E}[I_k]=\underset{k=1}{\overset{\infty}\sum}(1-p)^{k-1}=\frac{1}{p}\\
+  \text{E}[X]=\underset{k=1}{\overset{\infty}\sum}\text{E}[I_k]=\underset{k=1}{\overset{\infty}\sum}(1-p)^{k-1}=\frac{1}{p}\\\\
   $$
   方差要难算一点，计算平方均值需要借助几何分布的无记忆性，也就是第三个等号的推导
   $$
   \begin{aligned}
-  \text{E}[X^2]&=\text{E}[X^2|X>1]\cdot(1-p)+\text{E}[X^2|X=1]\cdot p\\
-  &=\text{E}[((X-1)+1)^2|X>1]\cdot(1-p)+p\\
-  &=\text{E}[(X+1)^2]\cdot(1-p)+p\\
-  &=(1-p)\text{E}[X^2]+2(1-p)\text{E}[X]+(1-p)+p\\
-  &=(1-p)\text{E}[X^2]+2(1-p)/p+1\\
+  \text{E}[X^2]&=\text{E}[X^2|X>1]\cdot(1-p)+\text{E}[X^2|X=1]\cdot p\\\\
+  &=\text{E}[((X-1)+1)^2|X>1]\cdot(1-p)+p\\\\
+  &=\text{E}[(X+1)^2]\cdot(1-p)+p\\\\
+  &=(1-p)\text{E}[X^2]+2(1-p)\text{E}[X]+(1-p)+p\\\\
+  &=(1-p)\text{E}[X^2]+2(1-p)/p+1\\\\
   \end{aligned}
   $$
   解得
@@ -81,7 +81,10 @@
 
 - $X$：在获取$r$次成功之前所做的失败的伯努利试验次数，$X\sim \text{Nebin}(r,p)$
   $$
-  p_X(k)=\bold{Pr}(X=k)=\binom{k+r-1}{k}(1-p)^kp^r=(-1)^{k}\binom{-r}{k}(1-p)^kp^r,\quad k=0,1,2,...
+  \begin{aligned}
+  p_X(k)&=\bold{Pr}(X=k)=\binom{k+r-1}{k}(1-p)^kp^r \\\\
+  &=(-1)^{k}\binom{-r}{k}(1-p)^kp^r,\quad k=0,1,2,...
+  \end{aligned}
   $$
 
 - 令$X=(X_1-1)+\cdots+(X_r-1)$，其中$X_1,\cdots,X_r$是独立同分布的几何分布变量，且参数为$p$，从而
@@ -125,23 +128,23 @@
 - 期望可以直接求
   $$
   \begin{aligned}
-  \text{E}[X]&=\underset{k\ge 0}\sum k\frac{e^{-\lambda}\lambda^k}{k!}\\
-  &=\underset{k\ge 1}\sum\frac{e^{-\lambda}\lambda^k}{(k-1)!}\\
-  &=\underset{k\ge 0}\sum\frac{e^{-\lambda}\lambda^{k+1}}{k!}\\
-  &=\lambda\underset{k\ge 0}\sum\frac{e^{-\lambda}\lambda^k}{k!}\\
+  \text{E}[X]&=\underset{k\ge 0}\sum k\frac{e^{-\lambda}\lambda^k}{k!}\\\\
+  &=\underset{k\ge 1}\sum\frac{e^{-\lambda}\lambda^k}{(k-1)!}\\\\
+  &=\underset{k\ge 0}\sum\frac{e^{-\lambda}\lambda^{k+1}}{k!}\\\\
+  &=\lambda\underset{k\ge 0}\sum\frac{e^{-\lambda}\lambda^k}{k!}\\\\
   &=\lambda
   \end{aligned}
   $$
   方差类似
   $$
   \begin{aligned}
-  \text{E}[X^2]&=\underset{k\ge 0}\sum k^2\frac{e^{-\lambda}\lambda^k}{k!}\\
-  &=\underset{k\ge 1}\sum k\frac{e^{-\lambda}\lambda^k}{(k-1)!}\\
-  &=\underset{k\ge 0}\sum(k+1)\frac{e^{-\lambda}\lambda^{k+1}}{k!}\\
-  &=\lambda\underset{k\ge 0}\sum(k+1)\frac{e^{-\lambda}\lambda^{k}}{k!}\\
-  &=\lambda\text{E}[X+1]\\
-  &=\lambda(\text{E}[X]+1)\\
-  &=\lambda(\lambda+1)\\
+  \text{E}[X^2]&=\underset{k\ge 0}\sum k^2\frac{e^{-\lambda}\lambda^k}{k!}\\\\
+  &=\underset{k\ge 1}\sum k\frac{e^{-\lambda}\lambda^k}{(k-1)!}\\\\
+  &=\underset{k\ge 0}\sum(k+1)\frac{e^{-\lambda}\lambda^{k+1}}{k!}\\\\
+  &=\lambda\underset{k\ge 0}\sum(k+1)\frac{e^{-\lambda}\lambda^{k}}{k!}\\\\
+  &=\lambda\text{E}[X+1]\\\\
+  &=\lambda(\text{E}[X]+1)\\\\
+  &=\lambda(\lambda+1)\\\\
   \text{Var}[X]&=\text{E}[X^2]-\text{E}[X]^2=\lambda(\lambda+1)-\lambda^2=\lambda
   \end{aligned}
   $$
@@ -178,7 +181,7 @@ $$
 令$X_1,\cdots,X_n\in\{0,1\}$是独立试验，$X=\underset{i=1}{\overset{n}\sum}X_i$，且$\mu=\text{E}[X]$，那么对任意$\delta>0$，有upper tail
 $$
 \bold{Pr}(X\ge(1+\delta)\mu)\le\left(\frac{e^{\delta}}{(1+\delta)^{(1+\delta)}}\right)^{\mu}\le\begin{cases}
-e^{-\frac{\mu\delta^2}{3}},&0<\delta<1\\
+e^{-\frac{\mu\delta^2}{3}},&0<\delta<1\\\\
 2^{-(1+\delta)\mu},&(1+\delta)\ge 2e
 \end{cases}
 $$
