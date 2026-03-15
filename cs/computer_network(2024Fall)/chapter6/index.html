@@ -1904,11 +1904,11 @@
 <h2 id="_3">差错检测和纠正技术</h2>
 <p>在发送节点，为了保护比特免受差错，使用差错检测和纠正比特（EDC）来增强数据 D，保护 header 和 payload</p>
 <p>接收方的挑战是在只收到 D’&amp; EDC’ 的情况下，确定 D’ 是否和初始的 D 相同。（几乎总是能检测出已经出现的比特差错，但也还是可能有未检出比特差错，undetected bit error）</p>
-<p><img alt="ch6-p1" src="../pics/chapter6/ch6-p1.png" /></p>
+<p><img alt="ch6-p1" src="https://s41.ax1x.com/2026/03/11/peFOoWt.png" /></p>
 <h3 id="_4">奇偶校验</h3>
 <p>单比特奇偶校验（补上校验位后成奇/偶）</p>
 <p>二维奇偶校验方案</p>
-<p><img alt="ch6-p2" src="../pics/chapter6/ch6-p2.png" /></p>
+<p><img alt="ch6-p2" src="https://s41.ax1x.com/2026/03/11/peFOIJI.png" /></p>
 <p>在单个比特出错的情况下可以直接定位发生差错的比特并纠正。二维奇偶校验也能检测（但不能纠正）两个比特差错的组合</p>
 <p>接收方检测和纠正差错的能力被称为<strong>前向纠错</strong>（forward error correction, FEC）</p>
 <h3 id="checksum">检验和（checksum）方法</h3>
@@ -1918,7 +1918,7 @@
 <p>CRC 编码也称为多项式编码，该编码将要发送的比特串看作系数为0和1的一个多项式</p>
 <p>所有 CRC 编码采用模 2 算术来做（在加法中不进位，减法中不借位，等价于按位异或操作）</p>
 <p>假设发送方要发送 d 比特的数据，首先发送方与接收方协商一个 r+1 比特的模式（我习惯叫成模式串），称为<strong>生成多项式（generator）</strong>，记为 G，要求 G 的最高位为 1</p>
-<p><img alt="ch6-p3" src="../pics/chapter6/ch6-p3.png" /></p>
+<p><img alt="ch6-p3" src="https://s41.ax1x.com/2026/03/11/peFO5FA.png" /></p>
 <p>需要计算出 <span class="arithmatex">\(R=\text{remainder}\frac{D\cdot2^r}{G}\)</span> 使得 G 整除 <span class="arithmatex">\(D\cdot2^r\text{ xor } R\)</span></p>
 <p>记住这里的 remainder 是模 2 算术下的</p>
 <p>如果采用的是国际标准的比特生成多项式 G，则能检测小于 r+1 个比特的突发差错，也能够检测任何奇数个比特差错.</p>
@@ -1939,25 +1939,25 @@
 <p>通过时分多路复用（tdm，将一个时间帧划分成 n 个时隙）或者频分多路复用（fdm）将信道进行划分：</p>
 <p>优点：消除了碰撞而且非常公平，每个节点都得到了 r/n bps 的传输速率</p>
 <p>缺点：传输速率被限制，即便在只有自己要传送数据的时候</p>
-<p><img alt="ch6-p4" src="../pics/chapter6/ch6-p4.png" /></p>
+<p><img alt="ch6-p4" src="https://s41.ax1x.com/2026/03/12/pek50tf.png" /></p>
 <h3 id="random-access-protocol">随机接入协议（random access protocol）</h3>
 <p>在随机接入协议中，一个传输节点总是以信道的全部速率（R bps）进行发送。当有碰撞时，涉及碰撞的每个节点反复地重发它的帧，到该帧无碰撞地通过位置。但是当一个节点设计一次碰撞时，它不必立刻重发该帧。<strong>相反，它在重发该帧之前等待一个随机时延（独立选择）。</strong></p>
 <p>常用的随机接入协议包括 ALOHA 协议和载波侦听多路访问（CSMA）协议</p>
 <h3 id="aloha">时隙 ALOHA</h3>
-<p><img alt="ch6-p5" src="../pics/chapter6/ch6-p5.png" /></p>
+<p><img alt="ch6-p5" src="https://s41.ax1x.com/2026/03/12/pek5s1g.png" /></p>
 <p>刚好有一个节点传输的时隙称为一个成功时隙（successful slot）。时隙多路访问协议的效率定义为：当有大量的活跃节点切每个节点总有大量的帧要发送时，长期运行中成功时隙的份额。</p>
 <p>假设每个节点试图在每个时隙以概率 p 传输一帧，假设有 N 个节点，则一个给定时隙时成功时隙的概率为 <span class="arithmatex">\(p(1-p)^{N-1}\)</span>，因为有 N 个节点，任意一个节点成功传送的概率为 <span class="arithmatex">\(Np(1-p)^{N-1}\)</span> 。经过计算，发现这个协议的最大效率为 <span class="arithmatex">\(1/e=0.37\)</span></p>
-<p><img alt="ch6-p6" src="../pics/chapter6/ch6-p6.png" /></p>
+<p><img alt="ch6-p6" src="https://s41.ax1x.com/2026/03/12/pek5U0I.png" /></p>
 <h3 id="aloha_1">ALOHA</h3>
 <p>时隙 aloha 要求所有节点同步他们的传输，以在每个时隙开始时开始传输。在纯 aloha 中，当一帧首次到达，节点立刻将该帧完整地传输进广播信道。</p>
 <p>如果一个传输的帧与一个或多个传输经历了碰撞，这个节点将立刻以概率 p 重传该帧。否则，该节点等待一个帧传输时间，在此等待之后，以概率 p 传输该帧，或者继续等待.</p>
 <p>则对于一个节点，成功传输一次要求在前一段时间间隔和自己传输时都不能有其他节点开始传输，这个概率为 <span class="arithmatex">\((1-p)^{2(N-1)}\)</span>，则成功传输一次的总概率为 <span class="arithmatex">\(p(1-p)^{2(N-1)}\)</span>，最大效率仅为 <span class="arithmatex">\(1/(2e)\)</span></p>
-<p><img alt="ch6-p7" src="../pics/chapter6/ch6-p7.png" /></p>
+<p><img alt="ch6-p7" src="https://s41.ax1x.com/2026/03/12/pek5wAP.png" /></p>
 <h3 id="csmacsmacd">载波侦听多路访问（CSMA，CSMA/CD）</h3>
 <p>载波侦听：一个节点在传输前先听信道。如果来自另一个节点的帧正向信道上发送，节点则等待直到检测到一小段时间没有传输，然后开始传输。</p>
 <p>碰撞检测：当一个传输节点在传输时一直在侦听此信道。如果检测到了另一个节点正在传输干扰帧，它就停止传输（让别人传），在重复“侦听-当空闲时传输”循环之前等待一段随机时间。</p>
 <p>由于传播时延的存在，即使存在载波侦听，还是会存在碰撞，故需要碰撞检测</p>
-<p><img alt="ch6-p8" src="../pics/chapter6/ch6-p8.png" /></p>
+<p><img alt="ch6-p8" src="https://s41.ax1x.com/2026/03/12/pek5ycQ.png" /></p>
 <p>右图：D往右传在先，但是检测到了 A，所以先停；A 往左传在先，但是检测到了 D，也先停</p>
 <ol>
 <li>适配器从网络层一条获得数据报，准备链路层帧，并将其放入帧适配器缓存中。</li>
@@ -2016,13 +2016,13 @@
 </li>
 </ul>
 <p>路由器的每个接口都有一个 arp 模块和适配器</p>
-<p><img alt="ch6-p9" src="../pics/chapter6/ch6-p9.png" /></p>
+<p><img alt="ch6-p9" src="https://s41.ax1x.com/2026/03/12/pek5a7t.png" /></p>
 <p>主机 111.111.111.111 要向 222.222.222.222 发送一个 ip 数据报，需要指定一个适当的 mac 地址;</p>
 <p>直接指定 222.222. 的 mac 地址是不现实的，因为子网的适配器不会维护这一转换（停留在链路层），故数据报必须首先发送给路由器接口 111.111.111.110（第一跳），这样才能从链路层转换到网络层，进行下一步的路由</p>
 <h3 id="_7">以太网</h3>
 <p>交换机运行在第二层（链路层），而路由器运行在第三层（网络层）</p>
 <p>以太网帧结构</p>
-<p><img alt="ch6-p11" src="../pics/chapter6/ch6-p10.png" /></p>
+<p><img alt="ch6-p11" src="https://s41.ax1x.com/2026/03/12/pek5Bh8.png" /></p>
 <ul>
 <li>前同步码（8字节）。个人理解是一种魔数。前七个字节相同（10101010），用于“唤醒”接收适配器，将它们的时钟和发送方的时钟相同步。第八个字节（10101011）警告适配器，”重要的内容要到了“</li>
 <li>目的地址（6字节），目的适配器的 mac 地址，如果不是本适配器的地址或者广播地址就丢弃</li>
@@ -2048,7 +2048,7 @@
 </li>
 <li>
 <p>一个 mac 地址 2. 通向该 mac 地址的交换机接口（对应一个局域网网段） 3. 表项放置在表中的时间</p>
-<p><img alt="ch6-p11" src="../pics/chapter6/ch6-p11.png" /></p>
+<p><img alt="ch6-p11" src="https://s41.ax1x.com/2026/03/12/pek5r9S.png" /></p>
 <ul>
 <li>表中没有对应 DD-DD-DD-DD-DD-DD 的表项。 在这种情况下， 交换机向除接口 x 外的所有接口前面的输出缓存转发该帧的副本。 相当于广播</li>
 <li>表中有 DD-DD-DD-DD-DD-DD 与接口 x 关联的表项。在这种情况下，该帧从包括适配器 DD-DD-DD-DD-DD-DD 的局域网网段到来。无须将该帧转发到任何其他接口， 交换机通过丢弃该帧执行过滤功能即可。</li>
@@ -2082,13 +2082,13 @@
 </li>
 <li>
 <p>交换机和路由器比较</p>
-<p><img alt="ch6-p12" src="../pics/chapter6/ch6-p12.png" /></p>
+<p><img alt="ch6-p12" src="https://s41.ax1x.com/2026/03/13/peAb2ee.png" /></p>
 </li>
 </ol>
 <h3 id="vlan">虚拟局域网（VLAN）</h3>
 <p>支持VLAN 的交换机允许经一个单一的物理局域网基础设施定义多个虚拟局域网。在一个VLAN 内的主机彼此通信，仿佛它们（并且没有其他主机）与交换机连接。在一个基于端口的VLAN 中，交换机的端口（接口）由网络管理员划分为组。每个组构成一个VLAN, 在每个VLAN 中的端口形成一个广播域（即来自一个端口的广播流最仅能到达该组中的其他端口）。</p>
 <p>VLAN 间的互联：</p>
-<p><img alt="ch6-p13" src="../pics/chapter6/ch6-p13.png" /></p>
+<p><img alt="ch6-p13" src="https://s41.ax1x.com/2026/03/13/peAbRdH.png" /></p>
 <ol>
 <li>通过路由器（就像是分离的交换机）</li>
 <li>
@@ -2097,7 +2097,7 @@
 <p>IEEE 定义了一种扩展的以太网帧格式-802.1Q，用于跨越 VLAN 干线的帧。该帧由标准以太网帧与加进首部的 4 字节 VLAN 标签（VLAN tag）组成</p>
 </li>
 </ol>
-<p><img alt="ch6-p14" src="../pics/chapter6/ch6-p14.png" /></p>
+<p><img alt="ch6-p14" src="https://s41.ax1x.com/2026/03/13/peAb6sO.png" /></p>
 <h2 id="_9">链路虚拟化：网络作为链路层</h2>
 <h3 id="multiprotocol-label-switching-mpls">多协议标签交换（Multiprotocol Label Switching, MPLS）</h3>
 <p>目标：改善 ip 路由器的转发速度，使用固定长度的标签</p>
@@ -2105,7 +2105,7 @@
 <li>不放弃基于目的地 ip 数据报转发的基础设施</li>
 <li>使用固定的长度标识加快查找</li>
 </ul>
-<p><img alt="ch6-p15" src="../pics/chapter6/ch6-p15.png" /></p>
+<p><img alt="ch6-p15" src="https://s41.ax1x.com/2026/03/13/peAbcLD.png" /></p>
 <p>使用长度标识出接口可以不接触分组的 IP 首部</p>
 
 
@@ -2129,7 +2129,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年3月3日 15:40:11 UTC">2026年3月3日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年3月15日 05:00:06 UTC">2026年3月15日</span>
   </span>
 
     

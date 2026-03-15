@@ -1537,7 +1537,7 @@
 <li>结点只能向自己链路范围内的结点传输</li>
 <li>这些结点互相之间构成了网络</li>
 </ol>
-<p><img alt="ch7-p1" src="../pics/chapter7/ch7-p1.png" /></p>
+<p><img alt="ch7-p1" src="https://s41.ax1x.com/2026/03/13/peAb7y8.png" /></p>
 <h2 id="72">7.2 无线链路和网络特征</h2>
 <p>有线网络和无线网络的区别</p>
 <ol>
@@ -1551,7 +1551,7 @@
 <ol>
 <li>存在隐藏终端问题</li>
 </ol>
-<p><img alt="ch7-p2" src="../pics/chapter7/ch7-p2.png" /></p>
+<p><img alt="ch7-p2" src="https://s41.ax1x.com/2026/03/13/peAbTQf.png" /></p>
 <p>A 和 C 之间的信号衰减严重导致检测不到彼此（有障碍物，比如山），但是他们的信号在 B 处又会发生很强的干扰</p>
 <hr />
 <blockquote>
@@ -1564,13 +1564,13 @@
 <p>decoding：内积后求和（编码数据与编码做内积）</p>
 <p>每个编码实际上就是一个标准正交基，所以互作内积结果就是 0 or 1</p>
 <p>对于没有干扰的情况：</p>
-<p><img alt="ch7-p3" src="../pics/chapter7/ch7-p3.png" /></p>
+<p><img alt="ch7-p3" src="https://s41.ax1x.com/2026/03/13/peAbHOS.png" /></p>
 <p>对于有干扰的情况：</p>
-<p><img alt="ch7-p4" src="../pics/chapter7/ch7-p4.png" /></p>
+<p><img alt="ch7-p4" src="https://s41.ax1x.com/2026/03/13/peAbqeg.png" /></p>
 <h2 id="73-wifi80211">7.3 WiFi：802.11 无线局域网</h2>
 <h3 id="731">7.3.1 无线局域网体系结构</h3>
 <p>基本构件模块是基本服务集（basic service set, BSS，也称作 cell），包含一个或多个无线站点以及一个被称为接入点（Access point, AP）的中央基站，ap 连接到一个互联设备（交换机或者路由器）进而接入互联网</p>
-<p><img alt="ch7-p5" src="../pics/chapter7/ch7-p5.png" /></p>
+<p><img alt="ch7-p5" src="https://s41.ax1x.com/2026/03/15/peVintP.png" /></p>
 <p>基础设施模式下的 BSS:</p>
 <ul>
 <li>无线站点（每个设备上的模块）</li>
@@ -1593,7 +1593,7 @@
 <li>可能存在身份验证</li>
 <li>运行 DHCP 以获取在 AP 子网中的 ip 地址</li>
 </ul>
-<p><img alt="ch7-p6" src="../pics/chapter7/ch7-p6.png" /></p>
+<p><img alt="ch7-p6" src="https://s41.ax1x.com/2026/03/15/peVikOH.png" /></p>
 <h3 id="732-80211-mac">7.3.2 802.11 mac 协议</h3>
 <p>采用带碰撞避免的载波侦听多路访问（CSMA/CA） 不同于之前学的 CSMA/CD（带有碰撞检测的载波侦听多路访问）</p>
 <p>CSMA：当侦听到信道忙碌抑制传输（随机 backoff）</p>
@@ -1602,15 +1602,15 @@
 <li>由于无线信道相对较高的比特差错率，802.11 采用链路层确认/重传（ARQ）方案</li>
 </ol>
 <p>故一旦站点开始发送一个帧，就完全地发送整个数据帧</p>
-<p><img alt="ch7-p7" src="../pics/chapter7/ch7-p7.png" /></p>
+<p><img alt="ch7-p7" src="https://s41.ax1x.com/2026/03/15/peViEmd.png" /></p>
 <p>DIFS:分布式帧间间隔 SIFS:短帧间间隔</p>
 <blockquote>
 <p>RTS（请求发送, request to send）, CTS（允许发送，clear to send）</p>
 </blockquote>
-<p><img alt="ch7-p8" src="../pics/chapter7/ch7-p8.png" /></p>
+<p><img alt="ch7-p8" src="https://s41.ax1x.com/2026/03/15/peViuff.png" /></p>
 <h3 id="733-80211">7.3.3 802.11 帧</h3>
 <p>长度（34～2346 字节）</p>
-<p><img alt="ch7-p9" src="../pics/chapter7/ch7-p9.png" /></p>
+<p><img alt="ch7-p9" src="https://s41.ax1x.com/2026/03/15/peVimkt.png" /></p>
 <ol>
 <li>
 <p>有效载荷和 crc</p>
@@ -1618,8 +1618,8 @@
 </li>
 <li>
 <p>地址字段，每个地址字段都是一个 mac 地址</p>
-<p><img alt="ch7-p10" src="../pics/chapter7/ch7-p10.png" /></p>
-<p><img alt="ch7-p11" src="../pics/chapter7/ch7-p11.png" /></p>
+<p><img alt="ch7-p10" src="https://s41.ax1x.com/2026/03/15/peViV0A.png" /></p>
+<p><img alt="ch7-p11" src="https://s41.ax1x.com/2026/03/15/peViZTI.png" /></p>
 <p>AP 是链路层设备，不能理解 ip 地址，地址3帮助获取了路由器接口的 mac 地址.</p>
 </li>
 <li>
@@ -1648,7 +1648,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年3月3日 15:40:11 UTC">2026年3月3日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年3月15日 05:00:06 UTC">2026年3月15日</span>
   </span>
 
     
