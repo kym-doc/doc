@@ -12,7 +12,7 @@
       
       
       
-        <link rel="next" href="test/">
+        <link rel="next" href="contribute/">
       
       
         
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              主页
+              网站介绍
             
           </span>
         </div>
@@ -278,7 +278,7 @@
   <span class="md-ellipsis">
     
   
-    主页
+    网站介绍
   
 
     
@@ -296,7 +296,7 @@
   <span class="md-ellipsis">
     
   
-    主页
+    网站介绍
   
 
     
@@ -369,14 +369,14 @@
   
   
     <li class="md-nav__item">
-      <a href="test/" class="md-nav__link">
+      <a href="contribute/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    pdf 与代码块样例
+    添加笔记教程
   
 
     
@@ -1168,30 +1168,18 @@
 <p>本站采用开源项目 Mkdocs 与 Material 进行构建，页面采用 Markdown 进行写作。您可以在下面找到它们的网站和非官方的中文化版本。如果您希望通过 Git 协作来完成贡献，您可能会用到这下面的内容。</p>
 <p>Mkdocs: <a href="https://www.mkdocs.org/">官方</a>, <a href="https://hellowac.github.io/mkdocs-docs-zh/">非官方中文</a></p>
 <p>Material: <a href="https://squidfunk.github.io/mkdocs-material/">官方</a>, <a href="https://mkdocs.dbtgo.com/getting-started/">非官方中文</a></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>对于协助开发者，您可能需要进行本地调试，环境依赖文件位于 <code>requirements.txt</code> 中，在安装好 python 之后，在顶层文件夹中执行如下命令</p>
-<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</span></code></pre></div></td></tr></table></div>
-</div>
 <h2 id="_3">如何反馈阅读中发现的问题或者疑惑</h2>
 <p>如果在阅读笔记的过程中发现了任何问题或者有任何疑惑，您可以通过 Github 仓库的 Issues 来反馈这些问题或者疑惑，或者直接通过社交媒体联系相应的文档维护者。</p>
 <h2 id="_4">如何贡献自己的笔记</h2>
-<p>一般来说，理想的笔记情况应当是采用 Markdown 格式，对于其中的图片，应尽可能采用外链（可以考虑使用图床或 njubox），未来会逐渐替换掉原来存储在仓库中的图片。</p>
-<p>然而，现实中很多的笔记通常采用手写，转换成 Markdown 是一个麻烦的工作，所以可以采用 pdf + 外链链接的形式来完成（pdf 请上传至外部网盘如 njubox 中）</p>
 <p>如果您有意向分享自己的笔记，有如下两种方式：</p>
 <ol>
 <li>
-<p>本地部署 Mkdocs，并通过 Pull requrest 来提交。</p>
+<p>将仓库 Clone 到本地，进行修改，并通过 Pull Request 来提交。您可以参考此页面“<a href="contribute/">添加笔记教程</a>”来了解文档的添加方式以及如何使用 Mkdocs 来预览修改后的效果。</p>
 </li>
 <li>
-<p>联系他人代为提交</p>
+<p>联系其他文档维护者代为提交，您应当向其提供 Markdown 源文件（如果该课程是首次添加，您需要额外提供一个 <code>about.md</code> 文件用于介绍该课程）或者已经整理好的 pdf 文件。</p>
 </li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">关于自定义语法的说明</p>
-<p>得益于 Material 主题提供的强大功能，您可以使用一些自定义语法来增强笔记的可读性和美观度。例如，您可以使用 <code>!!! note</code> 语法来创建一个 note 类型的提示框，或者使用 <code>!!! warning</code> 来创建警告框。这些自定义语法在 Mkdocs 中被很好地支持，并且可以显著提升笔记的视觉效果和阅读体验。（具体样式可以参考本文件）</p>
-</div>
 
 
 
@@ -1214,7 +1202,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年3月8日 16:41:22 UTC">2026年3月8日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年3月15日 10:59:27 UTC">2026年3月15日</span>
   </span>
 
     
@@ -1276,13 +1264,13 @@
         
         
           
-          <a href="test/" class="md-footer__link md-footer__link--next" aria-label="下一页: pdf 与代码块样例">
+          <a href="contribute/" class="md-footer__link md-footer__link--next" aria-label="下一页: 添加笔记教程">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                pdf 与代码块样例
+                添加笔记教程
               </div>
             </div>
             <div class="md-footer__button md-icon">
