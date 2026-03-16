@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     container.appendChild(viewerDiv);
 
     // 使用 embedpdf.js 初始化 PDF
-    import("https://testingcf.jsdelivr.net/npm/@embedpdf/snippet@2/dist/embedpdf.js")
+    import("https://testingcf.jsdelivr.net/npm/@embedpdf/snippet@2/dist/embedpdf.js?lang=zh-CN/")
         .then((module) => {
             const EmbedPDF = module.default;
             EmbedPDF.init({
@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 target: viewerDiv,
                 src: pdfSrc,
                 theme: { preference: "system" },
+                i18n: { defaultLocale: "zh-CN" },
             });
         })
         .catch((err) => {
