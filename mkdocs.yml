@@ -106,6 +106,9 @@ nav:
       - cs/crypto/about.md
     - 形式语言与自动机:
       - cs/fla/about.md
+    - 问题求解
+      - 问题求解（一）（2025 秋）
+        - cs/problem_solving_1(2025Fall)/about.md
   - 人工智能（脑科学与人工智能）:
     - ai/index.md
     - 计算方法:
