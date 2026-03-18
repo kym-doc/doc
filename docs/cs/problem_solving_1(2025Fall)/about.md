@@ -23,5 +23,6 @@
 
 ## 资源合集
 
-- 个人课程笔记：[笔记](https://box.nju.edu.cn/d/552b2c7700644607bbfb/)
+- 个人课程笔记
+    <div class="pdf-viewer-container" data-pdf="https://box.nju.edu.cn/seafhttp/f/f6312e7c91f7493f8821/?op=view"></div>
 - OJ、机试涉及的知识：递归，贪心算法，记忆化搜索，模拟（主要是指针，链表，STL），简单字符串操作，DFS以及剪枝，预处理
