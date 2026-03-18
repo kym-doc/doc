@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // 创建提示文字
     const notice = document.createElement("div");
     notice.className = "pdf-viewer-notice";
-    notice.innerText =
-        "此页面采用内嵌 PDF，你可以在左上角的菜单栏导出 pdf 文件，如果手机端无法观看请尝试等待或者刷新，若长时间等待/刷新仍然无法观看，请考虑使用电脑端或者下载查看";
+    notice.innerHTML =
+        `此页面采用内嵌 PDF，你可以通过 <a href="${pdfSrc}" target="_blank">此链接</a> 下载 PDF，如果无法观看可能是因为网络抽风，请尝试等待/刷新/更换设备/下载查看`;
     container.appendChild(notice);
 
     // 创建 PDF 容器
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     container.appendChild(viewerDiv);
 
     // 使用 embedpdf.js 初始化 PDF
-    import("https://testingcf.jsdelivr.net/npm/@embedpdf/snippet@2/dist/embedpdf.js?lang=zh-CN/")
+    import("https://unpkg.com/@embedpdf/snippet@2.9.0/dist/embedpdf.js")
         .then((module) => {
             const EmbedPDF = module.default;
             EmbedPDF.init({
