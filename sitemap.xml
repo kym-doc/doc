@@ -13,6 +13,14 @@
          <lastmod>2026-03-30</lastmod>
     </url>
     <url>
+         <loc>https://kym-doc.github.io/ai/ai_intro/about/</loc>
+         <lastmod>2026-03-30</lastmod>
+    </url>
+    <url>
+         <loc>https://kym-doc.github.io/ai/ml_intro/about/</loc>
+         <lastmod>2026-03-30</lastmod>
+    </url>
+    <url>
          <loc>https://kym-doc.github.io/ai/numerical_method/about/</loc>
          <lastmod>2026-03-30</lastmod>
     </url>
@@ -22,6 +30,14 @@
     </url>
     <url>
          <loc>https://kym-doc.github.io/all/</loc>
+         <lastmod>2026-03-30</lastmod>
+    </url>
+    <url>
+         <loc>https://kym-doc.github.io/all/calculus/about/</loc>
+         <lastmod>2026-03-30</lastmod>
+    </url>
+    <url>
+         <loc>https://kym-doc.github.io/all/linear_algebra/about/</loc>
          <lastmod>2026-03-30</lastmod>
     </url>
     <url>
@@ -54,6 +70,22 @@
     </url>
     <url>
          <loc>https://kym-doc.github.io/all/probability/quickreview/</loc>
+         <lastmod>2026-03-30</lastmod>
+    </url>
+    <url>
+         <loc>https://kym-doc.github.io/all/univer_phy/about/</loc>
+         <lastmod>2026-03-30</lastmod>
+    </url>
+    <url>
+         <loc>https://kym-doc.github.io/astronomy/</loc>
+         <lastmod>2026-03-30</lastmod>
+    </url>
+    <url>
+         <loc>https://kym-doc.github.io/biology/</loc>
+         <lastmod>2026-03-30</lastmod>
+    </url>
+    <url>
+         <loc>https://kym-doc.github.io/chemistry/</loc>
          <lastmod>2026-03-30</lastmod>
     </url>
     <url>
@@ -126,6 +158,14 @@
     </url>
     <url>
          <loc>https://kym-doc.github.io/cs/problem_solving_1%282025Fall%29/about/</loc>
+         <lastmod>2026-03-30</lastmod>
+    </url>
+    <url>
+         <loc>https://kym-doc.github.io/math/</loc>
+         <lastmod>2026-03-30</lastmod>
+    </url>
+    <url>
+         <loc>https://kym-doc.github.io/physics/</loc>
          <lastmod>2026-03-30</lastmod>
     </url>
 </urlset>
