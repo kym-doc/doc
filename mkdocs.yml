@@ -99,7 +99,7 @@ nav:
     - chemistry/index.md
   - 生物:
     - biology/index.md
-  - 计算机科学与技术:
+  - 计算机:
     - cs/index.md
     - 编译原理: 
       - 课程介绍: cs/compiler/about.md
@@ -125,7 +125,7 @@ nav:
     - 问题求解:
       - 问题求解（一）（2025 秋）:
         - cs/problem_solving_1(2025Fall)/about.md
-  - 人工智能（脑科学与人工智能）:
+  - 人工智能:
     - ai/index.md
     - 计算方法:
       - 课程介绍: ai/numerical_method/about.md
