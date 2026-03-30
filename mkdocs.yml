@@ -73,6 +73,12 @@ nav:
   - 添加笔记教程: contribute.md
   - 多专业合上/通修:
     - all/index.md
+    - 微积分:
+      - 课程介绍: all/calculus/about.md
+    - 线性代数:
+      - 课程介绍: all/linear_algebra/about.md
+    - 大学物理:
+      - 课程介绍: all/univer_phy/about.md
     - 近代应用数学:
       - 课程介绍: all/modern_applied_math/about.md
       - all/modern_applied_math/exercise1.md
@@ -83,6 +89,16 @@ nav:
     - 概率论与数理统计:
       - 课程介绍: all/probability/about.md
       - all/probability/quickreview.md
+  - 数学:
+    - math/index.md
+  - 物理:
+    - physics/index.md
+  - 天文:
+    - astronomy/index.md
+  - 化学:
+    - chemistry/index.md
+  - 生物:
+    - biology/index.md
   - 计算机科学与技术:
     - cs/index.md
     - 编译原理: 
@@ -114,3 +130,7 @@ nav:
     - 计算方法:
       - 课程介绍: ai/numerical_method/about.md
       - ai/numerical_method/notes.md
+    - 人工智能导论:
+      - 课程介绍: ai/ai_intro/about.md
+    - 机器学习导论:
+      - 课程介绍: ai/ml_intro/about.md

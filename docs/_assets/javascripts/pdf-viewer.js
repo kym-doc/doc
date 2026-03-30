@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const notice = document.createElement("div");
     notice.className = "pdf-viewer-notice";
     notice.innerHTML =
-        `此页面采用内嵌 PDF，你可以通过 <a href="${pdfSrc}" target="_blank">此链接</a> 下载 PDF，如果无法观看可能是因为网络抽风，请尝试等待/刷新/更换设备/下载查看`;
+        `此页面采用内嵌 PDF，你可以通过 <a href="${pdfSrc}" target="_blank">此链接</a> 下载 PDF，如果无法观看可能是因为网络问题，请尝试等待/刷新/更换设备/下载查看`;
     container.appendChild(notice);
 
     // 创建 PDF 容器
